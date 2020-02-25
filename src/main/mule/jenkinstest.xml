@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="jenkinstestFlow" doc:id="9f20089d-b662-4d41-a6d1-020d04ff6029" >
 		<http:listener doc:name="Listener" doc:id="75d49950-0867-4e1d-b34c-c22c277afa35" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value='#["test jenkins"]' doc:name="Set Payload" doc:id="cb63f6bf-2217-4a94-8f71-465ce5d5827c" />
+		<logger level="INFO" doc:name="Logger" doc:id="28f5d62d-8ff6-4fea-8585-e16ebbaa6f96" message="#[payload]"/>
 	</flow>
 </mule>
